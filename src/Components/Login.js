@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Grid from '@material-ui/core/Grid'
-import { Avatar, Button, Icon, Link, Paper, TextField, Typography } from '@material-ui/core'
+import { Avatar, Button, Link, Paper, TextField, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import FaceIcon from '@material-ui/icons/Face';
 import axios from 'axios';

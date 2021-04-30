@@ -52,7 +52,7 @@ const Registrar = () =>{
     }
 
     const verificar = () =>{
-      if(datos.pass == datos.pass2){
+      if(datos.pass === datos.pass2){
         console.log("Contraseñas correctas...");
         registrar();
       }else{
