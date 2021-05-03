@@ -15,7 +15,6 @@ import colores from  '../img/colores.jpeg';
 import cuerpo from  '../img/cuerpo.jpeg';
 import familia from  '../img/familia.jpeg';
 import numeros from  '../img/numeros.jpeg';
-import A from  '../img/A.png';
 
 const useStyles = makeStyles({
     contenedor: {
@@ -27,65 +26,171 @@ const useStyles = makeStyles({
         paddingTop: '10px',
         paddingBottom: '10px',
     }
-  });
+});
 
 export default function Home () {
 
     const classes = useStyles();
 
-    const gato1 =<Slide
-        media={
-        <img src={A} />
-        }
-        mediaBackgroundStyle={{ backgroundColor: '#9CC7CE' }}
-        style={{ backgroundColor: '#5AA2AE' }}
-        title="A"
-        subtitle="Con la mano cerrada, se muestran las uñas
-        y se estira el dedo pulgar hacia un lado. La
-        palma mira al frente."/>
-
-    const gato2 = <Slide
-        media={
-        <img src="https://www.frecuenciageek.com/wp-content/uploads/2020/11/gato-marron_0.jpg" />
-        }
-        mediaBackgroundStyle={{ backgroundColor: blue[400] }}
-        style={{ backgroundColor: green }}
-        title="A"
-        subtitle="Con la mano cerrada, se muestran las uñas
-        y se estira el dedo pulgar hacia un lado. La
-        palma mira al frente."/>
-
     const [imagenes, guardarImagenes] = useState([]);
+
+    const [alimentosS, setAlimentos] = useState([]);
+    const [coloresS, setColores] = useState([]);
+    const [cuerpoS, setCuerpo] = useState([]);
+    const [calendarioS, setCalendario] = useState([]);
+    const [familiaS, setFamilia] = useState([]);
+    const [numerosS, setNumeros] = useState([]);
 
     useEffect(()=>{
         //peticion a la api
         const url = "https://t2ncqidnye.execute-api.us-east-2.amazonaws.com/Primera";
         axios.get(url)
         .then(response=>{
-            console.log(response.data.Items);
             guardarImagenes(response.data.Items);
+            console.log(imagenes)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
+        //alimenots
+        const urlA = "https://gde8r1la63.execute-api.us-east-2.amazonaws.com/Primera";
+        axios.get(urlA)
+        .then(response=>{
+            setAlimentos(response.data.Items);
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
+        //colores
+        const urlCo = "https://q82ln2ofji.execute-api.us-east-2.amazonaws.com/colores";
+        axios.get(urlCo)
+        .then(response=>{
+            setColores(response.data.Items);
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
+        //cuerpo
+        const urlCu = "https://sz6xk2v7ek.execute-api.us-east-2.amazonaws.com/cuerpo";
+        axios.get(urlCu)
+        .then(response=>{
+            setCuerpo(response.data.Items);
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
+        //calendario
+        const urlCa = "https://nwpec6ql45.execute-api.us-east-2.amazonaws.com/calendario";
+        axios.get(urlCa)
+        .then(response=>{
+            setCalendario(response.data.Items);
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
+        //familia
+        const urlF = "https://xnvtaqoovj.execute-api.us-east-2.amazonaws.com/familia";
+        axios.get(urlF)
+        .then(response=>{
+            setFamilia(response.data.Items);
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
+        //numeros
+        const urlN = "https://rmuzun1rkl.execute-api.us-east-2.amazonaws.com/numeros";
+        axios.get(urlN)
+        .then(response=>{
+            setNumeros(response.data.Items);
         })
         .catch(error=>{
             console.log(error)
         })
     },[]);
 
-    const datosI = imagenes.map((item, i) => (
-        <p key={i}>Hola{item.nombre}</p>
-    ));
-
-    var datosAbc = imagenes.map((item, i) => {
+    const listaOrdenada = [...imagenes].sort((a,b)=>(a.nombre > b.nombre) ? 1 : a.nombre < b.nombre ? -1 : 0);
+    var datosAbc = listaOrdenada.map((item, i) => {
         return (<Slide
         media={
         <img src={item.ubicacion} />
         }
-        mediaBackgroundStyle={{ backgroundColor: blue[400] }}
-        style={{ backgroundColor: green }}
+        mediaBackgroundStyle={{ backgroundColor: '#9CC7CE' }}
+        style={{ backgroundColor: '#5AA2AE' }}
         title={item.nombre}
         subtitle={item.descripcion}/>);
     });
 
+    var datosAlimentos = alimentosS.map((item, i) => {
+        return (<Slide
+        media={
+        <img src={item.ubicacion} />
+        }
+        mediaBackgroundStyle={{ backgroundColor: '#9CC7CE' }}
+        style={{ backgroundColor: '#5AA2AE' }}
+        title={item.nombre}
+        subtitle={item.descripcion}/>);
+    });
 
+    var datosColores = coloresS.map((item, i) => {
+        return (<Slide
+        media={
+        <img src={item.ubicacion} />
+        }
+        mediaBackgroundStyle={{ backgroundColor: '#9CC7CE' }}
+        style={{ backgroundColor: '#5AA2AE' }}
+        title={item.nombre}
+        subtitle={item.descripcion}/>);
+    });
+
+    var datosCuerpo = cuerpoS.map((item, i) => {
+        return (<Slide
+        media={
+        <img src={item.ubicacion} />
+        }
+        mediaBackgroundStyle={{ backgroundColor: '#9CC7CE' }}
+        style={{ backgroundColor: '#5AA2AE' }}
+        title={item.nombre}
+        subtitle={item.descripcion}/>);
+    });
+
+    var datosCalendario = calendarioS.map((item, i) => {
+        return (<Slide
+        media={
+        <img src={item.ubicacion} />
+        }
+        mediaBackgroundStyle={{ backgroundColor: '#9CC7CE' }}
+        style={{ backgroundColor: '#5AA2AE' }}
+        title={item.nombre}
+        subtitle={item.descripcion}/>);
+    });
+
+    var datosFamilia = familiaS.map((item, i) => {
+        return (<Slide
+        media={
+        <img src={item.ubicacion} />
+        }
+        mediaBackgroundStyle={{ backgroundColor: '#9CC7CE' }}
+        style={{ backgroundColor: '#5AA2AE' }}
+        title={item.nombre}
+        subtitle={item.descripcion}/>);
+    });
+
+    var datosNumeros = numerosS.map((item, i) => {
+        return (<Slide
+        media={
+        <img src={item.ubicacion} />
+        }
+        mediaBackgroundStyle={{ backgroundColor: '#9CC7CE' }}
+        style={{ backgroundColor: '#5AA2AE' }}
+        title={item.nombre}
+        subtitle={item.descripcion}/>);
+    });
 
     return (
         <>
@@ -103,22 +208,22 @@ export default function Home () {
                 <Tarjeta Titulo = "ABECEDARIO" fotos={datosAbc} imagen={abc}/>
             </Grid>
             <Grid item md={3} sm={6} xs={12} spacing={3}>
-                <Tarjeta Titulo = "ALIMENTOS" fotos={gato2} imagen={alimentos}/>
+                <Tarjeta Titulo = "ALIMENTOS" fotos={datosAlimentos} imagen={alimentos}/>
             </Grid>
             <Grid item md={3} sm={6} xs={12} spacing={3}>
-                <Tarjeta Titulo = "CALENDARIO" fotos={gato2} imagen={calendario}/>
+                <Tarjeta Titulo = "CALENDARIO" fotos={datosCalendario} imagen={calendario}/>
             </Grid>
             <Grid item md={3} sm={6}  xs={12} spacing={3}>
-                <Tarjeta Titulo = "COLORES" fotos={gato2} imagen={colores}/>
+                <Tarjeta Titulo = "COLORES" fotos={datosColores} imagen={colores}/>
             </Grid>
             <Grid item md={3} sm={6}  xs={12} spacing={3}>
-                <Tarjeta Titulo = "CUERPO HUMANO" fotos={gato2} imagen={cuerpo}/>
+                <Tarjeta Titulo = "CUERPO HUMANO" fotos={datosCuerpo} imagen={cuerpo}/>
             </Grid>
             <Grid item md={3} sm={6}  xs={12} spacing={3}>
-                <Tarjeta Titulo = "FAMILIA" fotos={gato2} imagen={familia}/>
+                <Tarjeta Titulo = "FAMILIA" fotos={datosFamilia} imagen={familia}/>
             </Grid>
             <Grid item md={3} sm={6}  xs={12} spacing={3}>
-                <Tarjeta Titulo = "NUMEROS" fotos={gato2} imagen={numeros}/>
+                <Tarjeta Titulo = "NUMEROS" fotos={datosNumeros} imagen={numeros}/>
             </Grid>
             <Grid>
             </Grid>

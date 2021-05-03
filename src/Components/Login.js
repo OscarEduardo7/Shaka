@@ -103,11 +103,11 @@ const Login = () =>{
 
               <TextField onChange={handleInputChange} name="username" placeholder="Plase enter username." label="Username" fullWidth required></TextField>
               <TextField onChange={handleInputChange} name="pass"placeholder="Place enter password." label="Password"  type="password" fullWidth required></TextField>
-              <Button onClick={enviarDatos} className={classes.btn} type="submit"  variant="contained" fullWidth>Login</Button>
+              <Button onClick={enviarDatos} className={classes.btn} type="submit"  variant="contained" fullWidth>Iniciar</Button>
               <Grid align="center">
-              <Typography> ¿Don't have a Shaka Account? </Typography>
-              <Link href="#">
-                    Create one now
+              <Typography> ¿No tienes una cuenta? </Typography>
+              <Link href="./signup">
+                    Crea una ahora
               </Link>
               </Grid>
         </Paper>

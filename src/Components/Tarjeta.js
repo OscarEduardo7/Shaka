@@ -36,15 +36,6 @@ const AutoRotatingCarouselModal = ({ handleOpen, setHandleOpen, isMobile, fotos 
           mobile={isMobile}
           style={{ position: "absolute" }}
         >
-          <Slide
-            media={
-              <img src="https://www.olondriz.com/wp-content/uploads/2020/04/ambar-perrito-1-1024x899.jpg" />
-            }
-            mediaBackgroundStyle={{ backgroundColor: '#95CFB7' }}
-            style={{ backgroundColor: '#555152' }}
-            title="Principal"
-            subtitle="Abecedario jejeje."
-          />
           {fotos}
         </AutoRotatingCarousel>
       </div>

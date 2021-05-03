@@ -35,12 +35,12 @@ function NavBar() {
     <div>
       <AppBar position="static" className={classes.menu}>
         <Toolbar>
-          <a href="./"><img src={logo} width="100px"/></a>
+          <a href="./home"><img src={logo} width="100px"/></a>
           <Typography variant="h5" className={classes.title}>
             
           </Typography>
-          <Button color="inherit" className={classes.boton}>Login</Button>
-          <Button color="inherit" className={classes.boton}>Sign Up</Button>
+          <Button color="inherit" className={classes.boton} onClick={()=>{window.location.href='./';}}>Login</Button>
+          <Button color="inherit" className={classes.boton} onClick={()=>{window.location.href='./signup';}}>Sign Up</Button>
         </Toolbar>
       </AppBar> 
     </div>

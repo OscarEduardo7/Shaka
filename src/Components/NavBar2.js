@@ -35,12 +35,12 @@ function NavBar2() {
     <div>
       <AppBar position="static" className={classes.menu}>
         <Toolbar>
-          <a href="./"><img src={logo} width="100px"/></a>
+          <a href="./home"><img src={logo} width="100px"/></a>
           <Typography variant="h5" className={classes.title}>
             
           </Typography>
-          <Button color="inherit" className={classes.boton}>Hablar</Button>
-          <Button color="inherit" className={classes.boton}>Aprender</Button>
+          <Button color="inherit" className={classes.boton} onClick={()=>{window.location.href='./hablar';}}>Hablar</Button>
+          <Button color="inherit" className={classes.boton} onClick={()=>{window.location.href='./aprender';}}>Aprender</Button>
         </Toolbar>
       </AppBar> 
     </div>
