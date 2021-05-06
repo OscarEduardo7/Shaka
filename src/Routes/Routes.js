@@ -4,6 +4,7 @@ import Home from '../Pages/Home';
 import Inicio from '../Pages/Inicio'
 import Registro from '../Pages/Registro'
 import Eleccion from '../Pages/Eleccion'
+import Traductor from '../Pages/Traductor';
 //importamos nuestras pagias
 
 function Routes(){
@@ -14,6 +15,7 @@ function Routes(){
                 <Route exact path="/signup" component={Registro}/>
                 <Route exact path="/home" component={Eleccion}/>
                 <Route exact path="/aprender" component={Home}/>
+                <Route exact path="/translate" component={Traductor}/>
             </Switch>
         </BrowserRouter>
     );

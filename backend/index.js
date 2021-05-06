@@ -32,6 +32,15 @@ const rek = new AWS.Rekognition(aws_keys.rekognition);
 const translate = new AWS.Translate(aws_keys.translate);
 const cognito = new AmazonCognitoIdentity.CognitoUserPool(aws_keys.cognito);
 
+const fs = require('fs')
+AWS.config.apiVersions = {
+  polly: '2016-06-10',
+  // other service API versions
+};
+
+const polly = new AWS.Polly(aws_keys.polly);
+
+
 
 //peticion docClient
 app.get("/nuevos", function(req, res){
@@ -379,3 +388,34 @@ app.post("/signup", async (req, res) => {
       res.json(req.body.username+' registrado');
   });
 });
+
+
+app.post("/polly", async (req, res) =>{
+  let body = req.body;
+  let texto = body.text;
+  console.log(texto);
+  const input = {
+    Text: texto, //"Hello Polly",
+    OutputFormat: "mp3",
+    VoiceId: "Joanna"
+  }
+  
+  polly.synthesizeSpeech(input, (err, data) =>{
+    if(err){
+      console.log(err)
+      return
+    }
+    if (data.AudioStream instanceof Buffer){
+      fs.writeFile('hello.mp3', data.AudioStream, (fsErr) =>{
+        if(fsErr){
+          console.error(fsErr)
+          console.log(fsErr)
+          return
+        }
+        console.log('Success');
+        res.send("success");
+      })
+    }
+  });
+});
+
