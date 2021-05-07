@@ -10,7 +10,8 @@ class AudioM extends React.Component {
 
     };
 
-        this.url = "https://proyecto-lenguaje.s3.us-east-2.amazonaws.com/audios/hello.mp3"; // "http://streaming.tdiradio.com:8000/house.mp3";
+        this.url = "https://proyecto-lenguaje.s3.us-east-2.amazonaws.com/audios/welcome.mp3"; // "http://streaming.tdiradio.com:8000/house.mp3";
+        //"https://proyecto-lenguaje.s3.us-east-2.amazonaws.com/audios/hello.mp3";
         this.audio = new Audio(this.url);
         this.play = this.play.bind(this);
         this.pause = this.pause.bind(this);

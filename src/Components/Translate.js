@@ -113,7 +113,33 @@ const Translate = () =>{
     }
 
     const pollyPocket = async()=>{
-        axios.post(pl,{text: traduccion})
+        let lan = 'es-MX';
+        let voz = 'Miguel';
+        if (opcionP == 'Francés'){
+            lan = 'fr-FR';
+            voz = 'Mathieu';
+        } 
+        else if (opcionP == 'Italiano'){
+            lan = 'it-IT';
+            voz = 'Giorgio';
+        }
+        else if (opcionP == 'Coreano'){
+            lan = 'ko-KR';
+            voz = 'Seoyeon';
+        }
+        else if (opcionP == 'Ruso'){
+            lan = 'ru-RU';
+            voz = 'Tatyana';
+        }
+        else if (opcionP == 'Inglés'){
+            lan = 'en-US';
+            voz = 'Joanna';
+        } 
+        else if (opcionP == 'Español'){
+            lan = 'es-MX';
+            voz = 'Miguel';
+        } 
+        axios.post(pl,{text: traduccion, voz: voz, lan: lan})
             .then(response=>{
                 //console.log(response.data);
                if(response.data != ""){

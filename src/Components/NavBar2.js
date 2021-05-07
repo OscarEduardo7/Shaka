@@ -39,7 +39,7 @@ function NavBar2() {
           <Typography variant="h5" className={classes.title}>
             
           </Typography>
-          <Button color="inherit" className={classes.boton} onClick={()=>{window.location.href='./hablar';}}>Hablar</Button>
+          <Button color="inherit" className={classes.boton} onClick={()=>{window.location.href='./translate';}}>Hablar</Button>
           <Button color="inherit" className={classes.boton} onClick={()=>{window.location.href='./aprender';}}>Aprender</Button>
         </Toolbar>
       </AppBar> 

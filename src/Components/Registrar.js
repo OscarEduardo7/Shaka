@@ -89,10 +89,10 @@ const Registrar = () =>{
                     <Avatar className={classes.avatar}><FaceIcon/></Avatar>
                     <h2>Sign Up</h2>
                 </Grid>
-                <TextField onChange={handleInputChange} name="username" placeholder="Plase enter username." label="Username" fullWidth required></TextField>
-                <TextField onChange={handleInputChange} name="name" placeholder="Plase enter name." label="Name" fullWidth required></TextField>
-                <TextField onChange={handleInputChange} name="email" placeholder="Plase enter email." label="Email" type="email" fullWidth required></TextField>
-                <TextField onChange={handleInputChange} name="pass" placeholder="Place enter password." label="Password"  type="password" fullWidth required></TextField>
+                <TextField onChange={handleInputChange} name="username" placeholder="Please enter username." label="Username" fullWidth required></TextField>
+                <TextField onChange={handleInputChange} name="name" placeholder="Please enter name." label="Name" fullWidth required></TextField>
+                <TextField onChange={handleInputChange} name="email" placeholder="Please enter email." label="Email" type="email" fullWidth required></TextField>
+                <TextField onChange={handleInputChange} name="pass" placeholder="Please enter password." label="Password"  type="password" fullWidth required></TextField>
                 <TextField onChange={handleInputChange} name="pass2" placeholder="Confirm the password." label="Confirm Password"  type="password" fullWidth required></TextField>
                 <Button onClick={enviarDatos} className={classes.btn} type="submit"  variant="contained" fullWidth>Sign Up</Button>
           </Paper>

@@ -393,11 +393,15 @@ app.post("/signup", async (req, res) => {
 app.post("/polly", async (req, res) =>{
   let body = req.body;
   let texto = body.text;
+  let voz = body.voz;
+  let lan = body.lan;
+
   console.log(texto);
   const input = {
     Text: texto, //"Hello Polly",
     OutputFormat: "mp3",
-    VoiceId: "Joanna"
+    VoiceId: voz,// "Miguel",//"Joanna",
+    LanguageCode: lan//"es-MX"
   }
   
   polly.synthesizeSpeech(input, (err, data) =>{
@@ -418,4 +422,5 @@ app.post("/polly", async (req, res) =>{
     }
   });
 });
+
 
