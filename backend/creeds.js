@@ -26,6 +26,10 @@ let aws_keys = {
     cognito:{
         UserPoolId: 'us-east-2_j6hSh59NY',
         ClientId: '68kfujbbsun3j7h0ov0g3e1qh9'
+    },
+    polly:{
+        accessKeyId: "AKIA3EBUF4FC7544KAKL",
+        secretAccessKey: "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"
     }
 
 

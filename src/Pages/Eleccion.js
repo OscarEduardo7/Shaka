@@ -57,7 +57,7 @@ export default function Home () {
         <Grid container spacing={3} justify="center">
             <Grid item md={3} sm={6} xs={12} spacing={1}>
                 <Typography variant="h5" color="initial" align='center'>Utilizar el traductor de texto a voz.</Typography>
-                <Button startIcon={<RecordVoiceOverIcon/>} variant='contained' className={classes.botonA}>HABLAR</Button>
+                <Button startIcon={<RecordVoiceOverIcon/>} variant='contained' className={classes.botonA} onClick={()=>{window.location.href='./translate';}}>HABLAR</Button>
             </Grid>
             <Grid item md={3} sm={6} xs={12} spacing={1}>
                 <Typography variant="h5" color="initial" align='center'>Aprender lenguaje de señas basico.</Typography>

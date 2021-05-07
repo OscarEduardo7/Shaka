@@ -101,8 +101,8 @@ const Login = () =>{
                   <h2>Login</h2>
               </Grid>
 
-              <TextField onChange={handleInputChange} name="username" placeholder="Plase enter username." label="Username" fullWidth required></TextField>
-              <TextField onChange={handleInputChange} name="pass"placeholder="Place enter password." label="Password"  type="password" fullWidth required></TextField>
+              <TextField onChange={handleInputChange} name="username" placeholder="Please enter username." label="Username" fullWidth required></TextField>
+              <TextField onChange={handleInputChange} name="pass"placeholder="Please enter password." label="Password"  type="password" fullWidth required></TextField>
               <Button onClick={enviarDatos} className={classes.btn} type="submit"  variant="contained" fullWidth>Iniciar</Button>
               <Grid align="center">
               <Typography> ¿No tienes una cuenta? </Typography>
