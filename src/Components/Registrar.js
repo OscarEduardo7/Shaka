@@ -6,7 +6,7 @@ import FaceIcon from '@material-ui/icons/Face';
 import axios from 'axios';
 import Swal from 'sweetalert2'
 
-const url = "http://localhost:9000/signup";
+const url = "http://3.20.204.148:9000/signup";
 
 const useStyles = makeStyles((theme) => ({
     paperStyle: {

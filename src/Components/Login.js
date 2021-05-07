@@ -7,7 +7,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import Cookies from 'universal-cookie';
 
-const url = "http://localhost:9000/login";
+const url = "http://3.20.204.148:9000/login";
 const cookiess = new Cookies();
 
 const useStyles = makeStyles((theme) => ({
@@ -86,7 +86,7 @@ const Login = () =>{
       console.log(error);
       Swal.fire({
         icon: 'error',
-        title: 'Ocurrio un error.',
+        title: 'Ocurrio un error2.',
         showConfirmButton: false,
         timer: 1500
       })

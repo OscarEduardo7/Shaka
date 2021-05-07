@@ -1,8 +1,8 @@
 # Proyecto - Manual Técnico
 
-## [PROYECTO - SHAKA] (http://g25-p2.s3-website-us-east-1.amazonaws.com/) <- agregar link de pagina>
+## [PROYECTO - SHAKA](http://p-shaka.s3-website.us-east-2.amazonaws.com/)
 
-- - -
+- 
 
 ## Datos de los estudiantes:
 * 201602469 - Oscar Eduardo Mazariegos López.
@@ -99,81 +99,6 @@ Los siguientes usuarios de **IAM** fueron utilizados para obtener los servicios 
      *  AmazonTranslateFullAccess.
 
 ---
-## Capturas de pantalla:
-
-### Capturas **S3**
-
-* Bucket Pagina Web:
-  <img src="imagenesDocu\bucketPagina.PNG" border="2" align="center"/>
-
-* Bucket Fotos:
-  <img src="imagenesDocu\bucketFotos.PNG" border="2" align="center"/>
-
-* Politica aplicada a buckets:
-  <img src="imagenesDocu\politicas Bucket.PNG" border="2" align="center"/>
-
-### Capturas **EC2**
-
-* Instancias utilizadas:
-  <img src="imagenesDocu\Instancias.PNG" border="2" align="center"/>
-
-* Segurity Groups asociados:
-  <img src="imagenesDocu\segurity.png" border="2" align="center"/>
-
-### Capturas **DynamoDB**
-
-* Tablas utilizadas:
-  <img src="imagenesDocu\tablasDynamo.PNG" border="2" align="center"/>
-
-* Tabla usuarios:
-  <img src="imagenesDocu\tablaUsername.PNG" border="2" align="center"/>
-
-
-### Capturas **Aplicacion Web**
-<img src="imagenesDocu\login.PNG" border="2" align="center"/>
-
-- - -
-<img src="imagenesDocu\camara.PNG" border="2" align="center"/>
-
-- - -
-
-<img src="imagenesDocu\registro.PNG" border="2" align="center"/>
-
-- - -
-
-<img src="imagenesDocu\perfil1.png" border="2" align="center"/>
-
-- - -
-<img src="imagenesDocu\extraer.PNG" border="2" align="center"/>
-
-- - -
-<img src="imagenesDocu\chat.PNG" border="2" align="center"/>
-- - -
-<img src="imagenesDocu\chat3.PNG" border="2" align="center"/>
-
-- - -
-
-<img src="imagenesDocu\subirfoto2.PNG" border="2" align="center"/>
-
-- - -
-
-<img src="imagenesDocu\perfilEdit.PNG" border="2" align="center"/>
-
-- - -
-
-<img src="imagenesDocu\fotos.PNG" border="2" align="center"/>
-
-- - -
-
-<img src="imagenesDocu\detalle.PNG" border="2" align="center"/>
-
-- - -
-
-<img src="imagenesDocu\foto.PNG" border="2" align="center"/>
-
-- - -
-- - -
-
 
 
 

@@ -11,7 +11,7 @@ import Reproducir from './Reproducir';
 import AudioM from './Audio';
 
 const tr = 'https://31dwp2xyk8.execute-api.us-east-2.amazonaws.com/Traducir';
-const pl = 'http://localhost:9000/polly';
+const pl = 'http://3.20.204.148:9000/polly';
 //https://31dwp2xyk8.execute-api.us-east-2.amazonaws.com/Traducir
 const cookie = new Cookies();
 let traduccion = 'Traduccion';

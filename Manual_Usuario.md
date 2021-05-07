@@ -1,6 +1,6 @@
-# Proyecto - Manual Técnico
+# Proyecto - Manual de Usuario
 
-## [PROYECTO - SHAKA] (http://g25-p2.s3-website-us-east-1.amazonaws.com/) <- agregar link de pagina>
+## [PROYECTO - SHAKA](http://p-shaka.s3-website.us-east-2.amazonaws.com/)
 
 - - -
 
